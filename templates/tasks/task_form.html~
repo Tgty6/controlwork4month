@@ -1,12 +1,1 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <h2 class="mb-4">Добавить задачу</h2>
-    <form method="post" class="shadow p-4 bg-light rounded">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-lg btn-success w-100 shadow-sm">
-            Добавить задачу
-        </button>
-    </form>
-{% endblock %}
+.
