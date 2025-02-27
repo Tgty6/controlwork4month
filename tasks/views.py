@@ -2,7 +2,6 @@ from django.views.generic import ListView, DetailView, CreateView
 from django.urls import reverse_lazy
 from .models import Task, Category
 from .forms import TaskForm
-from django.db.models import Q
 
 
 class TaskListView(ListView):
