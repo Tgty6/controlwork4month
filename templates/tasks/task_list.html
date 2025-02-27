@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Список задач</h2>
+
+<form method="GET" class="mb-3">
+</form>
+
+<ul class="list-group">
+    {% for task in tasks %}
+        <li class="list-group-item">
+            <a href="{% url 'task-detail' task.pk %}">{{ task.title }}</a> ({{ task.category.name }})
+        </li>
+    {% empty %}
+        <li class="list-group-item">Задачи не найдены</li>
+    {% endfor %}
+</ul>
+{% endblock %}
